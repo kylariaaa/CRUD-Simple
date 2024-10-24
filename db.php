@@ -16,8 +16,9 @@ $options = [
 
 try {
 //PDO PHP Data Object, PDO untuk melakukan operasi database
-    $pdo = new PDO($dsn, $user, $pass, $options); //membuat koneksi ke database
+    $pdo = new PDO($dsn, $user, $pass, $options); //membuat koneksi ke database menggunakan PDO
 } catch (\PDOException $e) {
-    throw new \PDOException($e->getMessage(), (int)$e->getCode());
+    //untuk menangani EROR
+    throw new \PDOException($e->getMessage(), (int)$e->getCode()); //tampilkan ulang Exception dengan pesan eror
 }
 ?>
