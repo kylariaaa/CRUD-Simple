@@ -7,6 +7,7 @@ $stmt = $pdo->prepare('SELECT * FROM users WHERE id = ?'); // query untuk mengam
 $stmt->execute([$id]); //menjalankan query
 $user = $stmt->fetch(); // menampilkan hasil query
 
+//memeriksa request menggunakan metode POST
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name = $_POST['name'];
     $email = $_POST['email'];

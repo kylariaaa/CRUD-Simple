@@ -15,8 +15,8 @@ $options = [
 ];
 
 try {
-//PDO PHP Data Object
-    $pdo = new PDO($dsn, $user, $pass, $options);
+//PDO PHP Data Object, PDO untuk melakukan operasi database
+    $pdo = new PDO($dsn, $user, $pass, $options); //dsn untuk mengidentifikasi data dalam database
 } catch (\PDOException $e) {
     throw new \PDOException($e->getMessage(), (int)$e->getCode());
 }
